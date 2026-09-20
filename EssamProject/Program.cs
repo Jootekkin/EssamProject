@@ -16,8 +16,8 @@ builder.Services.AddApiVersioning(options =>
     options.ReportApiVersions = true;
     //options.ApiVersionReader = new UrlSegmentApiVersionReader();
     //options.ApiVersionReader = new QueryStringApiVersionReader("api-version");
-    options.ApiVersionReader = new HeaderApiVersionReader("X-Version");
-    //new Microsoft.AspNetCore.Mvc.Versioning.MediaTypeApiVersionReader("ver"));
+    //options.ApiVersionReader = new HeaderApiVersionReader("X-Version");
+    options.ApiVersionReader = new MediaTypeApiVersionReader("ver");
 });
 
 var app = builder.Build();
