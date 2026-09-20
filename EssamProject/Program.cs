@@ -18,6 +18,7 @@ if (app.Environment.IsDevelopment())
 
 #region Tests
 
+app.MapGet("/Welcome", () => "Welcome to first minimal API");
 
 #endregion
 
