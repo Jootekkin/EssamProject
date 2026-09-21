@@ -4,7 +4,4 @@
 GET {{EssamProject_HostAddress}}/Welcome
 
 ###
-GET {{EssamProject_HostAddress}}/Cookies
-cookie
-"Authorization" : Yusuf,
-"Lambda" : 123456789
+GET {{EssamProject_HostAddress}}/api/filters
