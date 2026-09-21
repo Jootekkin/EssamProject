@@ -1,4 +1,6 @@
-﻿namespace EssamProject.Minimal_API
+﻿using EssamProject.Controllers.VersioningURL.Filters;
+
+namespace EssamProject.Minimal_API
 {
     public static class Grouping_Minimal
     {
@@ -6,7 +8,7 @@
         {
             var productGroup = group.MapGroup("Api/Product");
 
-            productGroup.MapGet("/Grouping", getproducts);
+            productGroup.MapGet("/Grouping", getproducts).AddEndpointFilter<MinimalApiFilter>();
 
             return productGroup;
         }
